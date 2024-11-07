@@ -92,7 +92,7 @@ main()
 {
 
 
-    cout << "**********************************" << endl << endl
+    cout << "**********************************" << endl << endl;
     cout << "     Se Compilo sin Errores       " << endl << endl;
     cout << "**********************************" << endl;
     return 0;
