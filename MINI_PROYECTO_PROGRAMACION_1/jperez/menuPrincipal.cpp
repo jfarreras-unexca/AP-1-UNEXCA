@@ -32,6 +32,8 @@ using namespace std;
 // VARIABLES GLOBALES
 //======================================================*/
 
+int opcionmenuPrincipal = 0;
+
 //======================================================
 
 
@@ -48,6 +50,39 @@ using namespace std;
 /*=======================================================
 // FUNCIONES //
 //=======================================================*/
+
+
+void enunciado() {  /* funcion para invocar enunciado */
+                    /* La funcion "void" no devuelve ningun resultado de retorno */
+
+
+    cout << "                                                                " << endl; /* "endl" funciona para insertar los caracteres en las siguiente linea */
+    cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl;
+    cout << "Sede: La Floresta                                               " << endl;
+    cout << "Turno: Nocturno                                                 " << endl;
+    cout << "Sección: 30311                                                  " << endl;
+    cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
+    cout << "                                                                " << endl;
+    cout << "     Se Compilo sin Errores       " << endl;
+    cout << "**********************************" << endl;
+}
+
+void menuPrincipal (){ /* funciones del menuPrincipal */
+
+    cout << "                                                                " << endl;
+    cout << "                         MENU PRINCIPAL                         " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "1.- INCLUIR.                                                    " << endl;
+    cout << "2.- MODIFICAR.                                                  " << endl;
+    cout << "3.- ELIMINAR.                                                   " << endl;
+    cout << "4.- INFORMES.                                                   " << endl;
+    cout << "0.- SALIDA.                                                     " << endl;
+
+
+}
+
+
 
 
 //------------------------------------------
@@ -67,22 +102,11 @@ using namespace std;
 main()
 {
 
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "**********************************" << endl;
-    cout << "     Se Compilo sin Errores       " << endl;
-    cout << "**********************************" << endl;
+    enunciado(); /* llamada del enunciado*/
+    menuPrincipal(); /* llamada del menu principal */
+
+    cout << " Ingrese una Opcion y Pulse Enter: " << endl;
+    cin >> opcionmenuPrincipal ;
     return 0;
 }
 /*=======================================================
@@ -94,4 +118,3 @@ main()
 //----------------------------------
 // Bloque de instrucciones
 //----------------------------------
-// funcion crea un numero aleatorio
