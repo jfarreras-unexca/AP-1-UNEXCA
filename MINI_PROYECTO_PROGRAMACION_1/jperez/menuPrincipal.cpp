@@ -44,9 +44,35 @@ using namespace std;
 //------------------------------------------
 
 
-void enunciado(); /* llamada del enunciado*/
+void enunciado()   /* llamada del enunciado*/
+                    /* funcion para invocar enunciado */
+                    /* La funcion "void" no devuelve ningun resultado de retorno */
+{
+    cout << "                                                                " << endl; /* "endl" funciona para insertar los caracteres en las siguiente linea */
+    cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl;
+    cout << "Sede: La Floresta                                               " << endl;
+    cout << "Turno: Nocturno                                                 " << endl;
+    cout << "Sección: 30311                                                  " << endl;
+    cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
+    cout << "                                                                " << endl;
+    cout << "     Se Compilo sin Errores       " << endl;
+    cout << "**********************************" << endl;
+}
 
-void menuPrincipal ();
+void menuPrincipal ()  /* llamada del menu principal */
+                        /* funciones del menuPrincipal */
+
+{    
+    cout << "                                                                " << endl;
+    cout << "                         MENU PRINCIPAL                         " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "1.- INCLUIR.                                                    " << endl;
+    cout << "2.- MODIFICAR.                                                  " << endl;
+    cout << "3.- ELIMINAR.                                                   " << endl;
+    cout << "4.- INFORMES.                                                   " << endl;
+    cout << "0.- SALIDA.                                                     " << endl;
+}
 
 /*coloca aqui Los prototipos si colocas
  los prototipos las funciones deben
@@ -84,62 +110,38 @@ main()
 
 int opcionmenuPrincipal = 0;
 
-        do {
-
-    enunciado();    /* funcion para invocar enunciado */
-                    /* La funcion "void" no devuelve ningun resultado de retorno */
-
-
-    cout << "                                                                " << endl; /* "endl" funciona para insertar los caracteres en las siguiente linea */
-    cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl;
-    cout << "Sede: La Floresta                                               " << endl;
-    cout << "Turno: Nocturno                                                 " << endl;
-    cout << "Sección: 30311                                                  " << endl;
-    cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
-    cout << "                                                                " << endl;
-    cout << "     Se Compilo sin Errores       " << endl;
-    cout << "**********************************" << endl;
-
-    menuPrincipal();    /* llamada del menu principal */
-                        /* funciones del menuPrincipal */
-
-    cout << "                                                                " << endl;
-    cout << "                         MENU PRINCIPAL                         " << endl;
-    cout << "                                                                " << endl;
-    cout << "                                                                " << endl;
-    cout << "1.- INCLUIR.                                                    " << endl;
-    cout << "2.- MODIFICAR.                                                  " << endl;
-    cout << "3.- ELIMINAR.                                                   " << endl;
-    cout << "4.- INFORMES.                                                   " << endl;
-    cout << "0.- SALIDA.                                                     " << endl;
+enunciado();
+menuPrincipal();
+    cout << " Ingrese una Opcion y Pulse Enter: " << endl; cin >> opcionmenuPrincipal;
 
 
-    cout << " Ingrese una Opcion y Pulse Enter: " << endl;
-    cin >> opcionmenuPrincipal;
+        do {    
 
-    switch(opcionmenuPrincipal) {
+ switch(opcionmenuPrincipal){
 
         case 1:
-            system("cls");
+            system("clear");
 
             break;
         case 2:
-            system("cls");
+            system("clear");
 
             break;
         case 3:
-            system("cls");
+            system("clear");
 
             break;
         case 4:
-            system("cls");
+            system("clear");
 
             break;
         case 0:
             exit(0);
 
             break;
+        menuPrincipal();
 }
+
 
 } while (opcionmenuPrincipal != 0);
     return 0;
