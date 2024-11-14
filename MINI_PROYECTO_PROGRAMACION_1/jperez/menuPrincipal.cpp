@@ -62,7 +62,7 @@ void enunciado()   /* llamada del enunciado*/
 void menuPrincipal ()  /* llamada del menu principal */
                         /* funciones del menuPrincipal */
 
-{    
+{
     cout << "                                                                " << endl;
     cout << "                         MENU PRINCIPAL                         " << endl;
     cout << "                                                                " << endl;
@@ -77,8 +77,22 @@ void menuPrincipal ()  /* llamada del menu principal */
 void subMenuIncluir ()  /* llamada del subMenuIncluir */
                         /* funciones del subMenuIncluir */
 
-{    
+{
+    cout << "                         MENU INCLUIR                           " << endl;
     cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "1.- ALUMNO.                                                     " << endl;
+    cout << "2.- PROCENTAJE DE EVALUACION.                                   " << endl;
+    cout << "3.- NOTA PARCIAL.                                               " << endl;
+    cout << "0.- VOLVER.                                                     " << endl;
+}
+
+void subMenuModificar ()  /* llamada del subMenuIncluir */
+                          /* funciones del subMenuIncluir */
+
+{
+    cout << "                        MENU MODIFICAR                          " << endl;
     cout << "                                                                " << endl;
     cout << "                                                                " << endl;
     cout << "                                                                " << endl;
@@ -129,30 +143,35 @@ int opcionmenuPrincipal = 0;
 
 enunciado();
 menuPrincipal();
-    cout << " Ingrese una Opcion y Pulse Enter: " << endl; cin >> opcionmenuPrincipal;
+    cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionmenuPrincipal;
 
 
-        do {    
+        do {
 
  switch(opcionmenuPrincipal){
 
         case 1:
-            system("cls");
+                system("cls");
                 enunciado();
                 subMenuIncluir();
             break;
-        case 2:
-            system("cls");
 
+        case 2:
+                system("cls");
+                enunciado();
+                subMenuModificar();
             break;
+
         case 3:
             system("cls");
 
             break;
+
         case 4:
             system("cls");
 
             break;
+
         case 0:
             exit(0);
 
