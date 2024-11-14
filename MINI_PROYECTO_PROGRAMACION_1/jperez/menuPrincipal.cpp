@@ -120,19 +120,19 @@ menuPrincipal();
  switch(opcionmenuPrincipal){
 
         case 1:
-            system("clear");
+            system("cls");
 
             break;
         case 2:
-            system("clear");
+            system("cls");
 
             break;
         case 3:
-            system("clear");
+            system("cls");
 
             break;
         case 4:
-            system("clear");
+            system("cls");
 
             break;
         case 0:
