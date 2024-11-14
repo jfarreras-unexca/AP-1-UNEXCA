@@ -88,8 +88,8 @@ void subMenuIncluir ()  /* llamada del subMenuIncluir */
     cout << "0.- VOLVER.                                                     " << endl;
 }
 
-void subMenuModificar ()  /* llamada del subMenuIncluir */
-                          /* funciones del subMenuIncluir */
+void subMenuModificar ()  /* llamada del subMenuModificar */
+                          /* funciones del subMenuModificar */
 
 {
     cout << "                        MENU MODIFICAR                          " << endl;
@@ -102,6 +102,33 @@ void subMenuModificar ()  /* llamada del subMenuIncluir */
     cout << "0.- VOLVER.                                                     " << endl;
 }
 
+void subMenuEliminar () /* llamada del subMenuEliminar */
+                        /* funciones del subMenuEliminar */
+
+{
+    cout << "                        MENU ELIMINAR                           " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "1.- ALUMNO.                                                     " << endl;
+    cout << "3.- NOTA PARCIAL.                                               " << endl;
+    cout << "0.- VOLVER.                                                     " << endl;
+}
+
+void subMenuInformes () /* llamada del subMenuInformes */
+                        /* funciones del subMenuInformes */
+
+{
+    cout << "                        MENU INFORMES                           " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "1.- ALUMNOS (LISTA DE CLASE).                                   " << endl;
+    cout << "2.- ACTA DE NOTAS.                                              " << endl;
+    cout << "3.- NOTAS DE UN ALUMNO.                                         " << endl;
+    cout << "0.- VOLVER.                                                     " << endl;
+}
 
 
 
@@ -140,6 +167,10 @@ main()
 {
 
 int opcionmenuPrincipal = 0;
+int opcionIncluir = 0;
+int opcionModificar = 0;
+int opcionEliminar = 0;
+int opcionInformes = 0;
 
 enunciado();
 menuPrincipal();
@@ -154,6 +185,10 @@ menuPrincipal();
                 system("cls");
                 enunciado();
                 subMenuIncluir();
+                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionIncluir;
+                        do{ switch(opcionIncluir) {case 0: system("cls"); break; } } while (opcionIncluir != 0);
+
+
             break;
 
 
@@ -161,15 +196,26 @@ menuPrincipal();
                 system("cls");
                 enunciado();
                 subMenuModificar();
+                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionModificar;
+                        do{ switch(opcionModificar) {case 0: exit(0); } } while (opcionModificar != 0);
+
             break;
 
         case 3:
-            system("cls");
+                system("cls");
+                enunciado();
+                subMenuEliminar();
+                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionEliminar;
+                        do{ switch(opcionEliminar) {case 0: exit(0); } } while (opcionEliminar != 0);
 
             break;
 
         case 4:
-            system("cls");
+                system("cls");
+                enunciado();
+                subMenuInformes();
+                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionInformes;
+                        do{ switch(opcionInformes) {case 0: exit(0); } } while (opcionInformes != 0);
 
             break;
 
