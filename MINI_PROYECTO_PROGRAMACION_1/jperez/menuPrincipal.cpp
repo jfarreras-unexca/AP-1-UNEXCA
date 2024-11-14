@@ -74,6 +74,23 @@ void menuPrincipal ()  /* llamada del menu principal */
     cout << "0.- SALIDA.                                                     " << endl;
 }
 
+void subMenuIncluir ()  /* llamada del subMenuIncluir */
+                        /* funciones del subMenuIncluir */
+
+{    
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "1.- ALUMNO.                                                     " << endl;
+    cout << "2.- PROCENTAJE DE EVALUACION.                                   " << endl;
+    cout << "3.- NOTA PARCIAL.                                               " << endl;
+    cout << "0.- VOLVER.                                                     " << endl;
+}
+
+
+
+
 /*coloca aqui Los prototipos si colocas
  los prototipos las funciones deben
  ir despues de la funcion main
@@ -121,7 +138,8 @@ menuPrincipal();
 
         case 1:
             system("cls");
-
+                enunciado();
+                subMenuIncluir();
             break;
         case 2:
             system("cls");
