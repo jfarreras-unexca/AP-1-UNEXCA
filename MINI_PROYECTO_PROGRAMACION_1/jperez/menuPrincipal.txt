@@ -408,14 +408,13 @@ main()
 int opcionIncluir = 0;
 int opcionModificar = 0;
 int opcionEliminar = 0;
-int opcionmenuPrincipal = 0;
+
+enunciado();
+menuPrincipal();
+
+cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionmenuPrincipal;
 
         do {
-            system("cls");
-            enunciado();
-            menuPrincipal();
-
-            cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionmenuPrincipal;
 
  switch(opcionmenuPrincipal){
 
