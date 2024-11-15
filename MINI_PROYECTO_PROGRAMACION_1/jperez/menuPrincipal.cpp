@@ -32,9 +32,14 @@ using namespace std;
 // VARIABLES GLOBALES
 //======================================================*/
 
+
+int opcionIncluir = 0;
+int opcionModificar = 0;
+int opcionEliminar = 0;
 int opcionInformes = 0;
 int opcionsubmenu = 0;
-
+//int opcionPrincipal = 0;
+int opcionmenuPrincipal = 0;
 //======================================================
 
 
@@ -43,6 +48,9 @@ int opcionsubmenu = 0;
 //=======================================================*/
 //------------------------------------------
 
+/*======================================================
+// PANTALLAS
+//======================================================*/
 
 void enunciado()   /* llamada del enunciado*/
                     /* funcion para invocar enunciado */
@@ -112,9 +120,11 @@ void subMenuEliminar () /* llamada del subMenuEliminar */
     cout << "                                                                " << endl;
     cout << "                                                                " << endl;
     cout << "1.- ALUMNO.                                                     " << endl;
-    cout << "3.- NOTA PARCIAL.                                               " << endl;
+    cout << "2.- NOTA PARCIAL.                                               " << endl;
     cout << "0.- VOLVER.                                                     " << endl;
 }
+
+
 
 void subMenuInformes () /* llamada del subMenuInformes */
                         /* funciones del subMenuInformes */
@@ -130,44 +140,235 @@ void subMenuInformes () /* llamada del subMenuInformes */
     cout << "0.- VOLVER.                                                     " << endl;
 }
 
-void opcionMenuInformes () /* llamada del opcionMenuInformes */
-                        /* funciones del opcionMenuInformes */
+
+/*======================================================
+//
+// FUNCIONES DE PANTALLAS
+//
+//======================================================*/
+
+void opcionMenuIncluir () /* llamada del opcionMenuIncluir */
+                        /* funciones del opcionMenuIncluir */
 {
 
-int opcionMenuInformes;
-subMenuInformes();
+int opcionMenuIncluir;
+
+enunciado();
+subMenuIncluir();
+
+cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionIncluir;
+
     do{
-    switch(opcionInformes)
+    switch(opcionIncluir)
     {
     case 1:
         system("cls");
         enunciado();
-        cout << "OPCION EN MANTENIMIENTO" << endl;
-        cout << "PRESIONE 0 PARA VOLVER AL MENU ANTERIOR ";
+        cout << "                        MENU INCLUIR                            " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
         cin >> opcionsubmenu;
     break;
 
     case 2:
         system("cls");
         enunciado();
-        cout << "OPCION EN MANTENIMIENTO";
+        cout << "                        MENU INCLUIR                            " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
     break;
 
     case 3:
         system("cls");
         enunciado();
-        cout << "OPCION EN MANTENIMIENTO";
+        cout << "                        MENU INCLUIR                            " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
     break;
 
     case 0:
 
     break;
 
-    (opcionInformes);
+    (opcionIncluir);
     }
 
-    }while (opcionInformes != 0);
+    }while (opcionsubmenu != 0);
 }
+
+
+void opcionMenuModificar () /* llamada del opcionMenuModificar */
+                        /* funciones del opcionMenuModificar */
+{
+
+int opcionMenuModificar;
+
+enunciado();
+subMenuModificar();
+
+cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionModificar;
+
+    do{
+    switch(opcionModificar)
+    {
+    case 1:
+        system("cls");
+        enunciado();
+        cout << "                        MENU MODIFICAR                          " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 2:
+        system("cls");
+        enunciado();
+        cout << "                        MENU MODIFICAR                          " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 3:
+        system("cls");
+        enunciado();
+        cout << "                        MENU MODIFICAR                          " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 0:
+
+    break;
+
+    (opcionIncluir);
+    }
+
+    }while (opcionsubmenu != 0);
+}
+
+
+
+void opcionMenuEliminar () /* llamada del opcionMenuEliminar */
+                        /* funciones del opcionMenuEliminar */
+{
+
+int opcionMenuEliminar;
+
+enunciado();
+subMenuEliminar();
+
+cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionEliminar;
+
+    do{
+    switch(opcionEliminar)
+    {
+    case 1:
+        system("cls");
+        enunciado();
+        cout << "                        MENU ELIMINAR                           " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 2:
+        system("cls");
+        enunciado();
+        cout << "                        MENU ELIMINAR                           " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 0:
+
+    break;
+
+    (opcionEliminar);
+    }
+
+    }while (opcionsubmenu != 0);
+}
+
+
+void opcionMenuInformes () /* llamada del opcionMenuEliminar */
+                        /* funciones del opcionMenuEliminar */
+{
+
+int opcionMenuInformes;
+
+enunciado();
+subMenuInformes();
+
+cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionInformes;
+
+    do{
+    switch(opcionInformes)
+    {
+    case 1:
+        system("cls");
+        enunciado();
+        cout << "                        MENU INFORMES                           " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 2:
+        system("cls");
+        enunciado();
+        cout << "                        MENU INFORMES                           " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 3:
+        system("cls");
+        enunciado();
+        cout << "                        MENU INFORMES                           " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
+        cin >> opcionsubmenu;
+    break;
+
+    case 0:
+
+    break;
+
+    (opcionsubmenu);
+    }
+
+    }while (opcionsubmenu != 0);
+}
+
+
 
 
 /*coloca aqui Los prototipos si colocas
@@ -204,61 +405,48 @@ subMenuInformes();
 main()
 {
 
-int opcionmenuPrincipal = 0;
 int opcionIncluir = 0;
 int opcionModificar = 0;
 int opcionEliminar = 0;
 
-
 enunciado();
 menuPrincipal();
-    cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionmenuPrincipal;
 
+cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionmenuPrincipal;
 
         do {
 
  switch(opcionmenuPrincipal){
 
         case 1:
-                system("cls");
-                enunciado();
-                subMenuIncluir();
-                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionIncluir;
-
+            system("cls");
+            opcionMenuIncluir();
 
             break;
 
         case 2:
-                system("cls");
-                enunciado();
-                subMenuModificar();
-                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionModificar;
-                        do{ switch(opcionModificar) {case 0: exit(0); } } while (opcionModificar != 0);
+            system("cls");
+            opcionMenuModificar();
 
             break;
 
         case 3:
-                system("cls");
-                enunciado();
-                subMenuEliminar();
-                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionEliminar;
-                        do{ switch(opcionEliminar) {case 0: exit(0); } } while (opcionEliminar != 0);
+            system("cls");
+            opcionMenuEliminar();
 
             break;
 
         case 4:
             system("cls");
-            enunciado();
-            subMenuInformes();
             opcionMenuInformes();
-                cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionInformes;
+
             break;
 
         case 0:
             exit(0);
 
             break;
-        menuPrincipal();
+        (opcionmenuPrincipal);
 }
 
 
