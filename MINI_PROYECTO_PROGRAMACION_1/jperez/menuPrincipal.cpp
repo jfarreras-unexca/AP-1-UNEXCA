@@ -33,7 +33,7 @@ using namespace std;
 //======================================================*/
 
 int opcionInformes = 0;
-
+int opcionsubmenu = 0;
 
 //======================================================
 
@@ -133,13 +133,18 @@ void subMenuInformes () /* llamada del subMenuInformes */
 void opcionMenuInformes () /* llamada del opcionMenuInformes */
                         /* funciones del opcionMenuInformes */
 {
+
+int opcionMenuInformes;
+subMenuInformes();
     do{
     switch(opcionInformes)
     {
     case 1:
         system("cls");
         enunciado();
-        cout << "OPCION EN MANTENIMIENTO";
+        cout << "OPCION EN MANTENIMIENTO" << endl;
+        cout << "PRESIONE 0 PARA VOLVER AL MENU ANTERIOR ";
+        cin >> opcionsubmenu;
     break;
 
     case 2:
@@ -158,7 +163,7 @@ void opcionMenuInformes () /* llamada del opcionMenuInformes */
 
     break;
 
-    (subMenuInformes);
+    (opcionInformes);
     }
 
     }while (opcionInformes != 0);
