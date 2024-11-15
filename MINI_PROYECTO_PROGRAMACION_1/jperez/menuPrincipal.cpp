@@ -7,7 +7,7 @@ Programador:
 Cedula:
 Descripcion del Programa:
 (coloco aqui el enunciado del ejercicio de la guia)
-
+seccion: 30311 5 a 7
 
 Comentarios:
 */
@@ -63,8 +63,8 @@ void enunciado()   /* llamada del enunciado*/
     cout << "Sección: 30311                                                  " << endl;
     cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
     cout << "                                                                " << endl;
-    cout << "     Se Compilo sin Errores       " << endl;
-    cout << "**********************************" << endl;
+    //cout << "     Se Compilo sin Errores       " << endl;
+    //cout << "**********************************" << endl;
 }
 
 void menuPrincipal ()  /* llamada del menu principal */
