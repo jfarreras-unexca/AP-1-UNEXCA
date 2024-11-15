@@ -32,7 +32,7 @@ using namespace std;
 // VARIABLES GLOBALES
 //======================================================*/
 
-
+int opcionInformes = 0;
 
 
 //======================================================
@@ -130,6 +130,39 @@ void subMenuInformes () /* llamada del subMenuInformes */
     cout << "0.- VOLVER.                                                     " << endl;
 }
 
+void opcionMenuInformes () /* llamada del opcionMenuInformes */
+                        /* funciones del opcionMenuInformes */
+{
+    do{
+    switch(opcionInformes)
+    {
+    case 1:
+        system("cls");
+        enunciado();
+        cout << "OPCION EN MANTENIMIENTO";
+    break;
+
+    case 2:
+        system("cls");
+        enunciado();
+        cout << "OPCION EN MANTENIMIENTO";
+    break;
+
+    case 3:
+        system("cls");
+        enunciado();
+        cout << "OPCION EN MANTENIMIENTO";
+    break;
+
+    case 0:
+
+    break;
+
+    (subMenuInformes);
+    }
+
+    }while (opcionInformes != 0);
+}
 
 
 /*coloca aqui Los prototipos si colocas
@@ -170,7 +203,7 @@ int opcionmenuPrincipal = 0;
 int opcionIncluir = 0;
 int opcionModificar = 0;
 int opcionEliminar = 0;
-int opcionInformes = 0;
+
 
 enunciado();
 menuPrincipal();
@@ -186,11 +219,9 @@ menuPrincipal();
                 enunciado();
                 subMenuIncluir();
                 cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionIncluir;
-                        do{ switch(opcionIncluir) {case 0: system(exit); break; } } while (opcionIncluir != 0);
+
 
             break;
-            menuPrincipal();
-
 
         case 2:
                 system("cls");
@@ -211,12 +242,11 @@ menuPrincipal();
             break;
 
         case 4:
-                system("cls");
-                enunciado();
-                subMenuInformes();
+            system("cls");
+            enunciado();
+            subMenuInformes();
+            opcionMenuInformes();
                 cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionInformes;
-                        do{ switch(opcionInformes) {case 0: exit(0); } } while (opcionInformes != 0);
-
             break;
 
         case 0:
