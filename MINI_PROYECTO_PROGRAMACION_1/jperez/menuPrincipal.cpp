@@ -186,10 +186,10 @@ menuPrincipal();
                 enunciado();
                 subMenuIncluir();
                 cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionIncluir;
-                        do{ switch(opcionIncluir) {case 0: system("cls"); menuPrincipal(); break; } } while (opcionIncluir != 0);
-
+                        do{ switch(opcionIncluir) {case 0: system(exit); break; } } while (opcionIncluir != 0);
 
             break;
+            menuPrincipal();
 
 
         case 2:
