@@ -60,7 +60,7 @@ void enunciado()   /* llamada del enunciado*/
     cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl;
     cout << "Sede: La Floresta                                               " << endl;
     cout << "Turno: Nocturno                                                 " << endl;
-    cout << "Sección: 30311                                                  " << endl;
+    cout << "Seccion: 30311                                                  " << endl;
     cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
     cout << "                                                                " << endl;
     //cout << "     Se Compilo sin Errores       " << endl;
@@ -156,6 +156,7 @@ int opcionMenuIncluir;
 enunciado();
 subMenuIncluir();
 
+
 cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionIncluir;
 
     do{
@@ -201,7 +202,7 @@ cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionIncluir;
     (opcionIncluir);
     }
 
-    }while (opcionsubmenu != 0);
+    }while (opcionIncluir != 0);
 }
 
 
@@ -213,6 +214,7 @@ int opcionMenuModificar;
 
 enunciado();
 subMenuModificar();
+
 
 cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionModificar;
 
@@ -315,11 +317,6 @@ void opcionMenuInformes () /* llamada del opcionMenuEliminar */
                         /* funciones del opcionMenuEliminar */
 {
 
-int opcionMenuInformes;
-
-enunciado();
-subMenuInformes();
-
 cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionInformes;
 
     do{
@@ -333,7 +330,6 @@ cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionInformes;
         cout << "                                                                " << endl;
         cout << "                                                                " << endl;
         cout << "OPCION EN MANTENIMIENTO PRESIONE 0 PARA VOLVER AL MENU ANTERIOR:";
-        cin >> opcionsubmenu;
     break;
 
     case 2:
@@ -359,15 +355,22 @@ cout << " Ingrese una Opcion y Pulse Enter: " ;cin >> opcionInformes;
     break;
 
     case 0:
-
+    (opcionMenuInformes);
     break;
 
-    (opcionsubmenu);
+    (opcionInformes);
     }
 
     }while (opcionsubmenu != 0);
+
 }
 
+void volverSubMenuInformes() {
+    enunciado();
+    subMenuInformes();
+    opcionMenuInformes();
+
+}
 
 
 
@@ -439,6 +442,8 @@ int opcionmenuPrincipal = 0;
 
         case 4:
             system("cls");
+            enunciado();
+            subMenuInformes();
             opcionMenuInformes();
 
             break;
@@ -447,7 +452,8 @@ int opcionmenuPrincipal = 0;
             exit(0);
 
             break;
-        (opcionmenuPrincipal);
+         //   (opcionsubmenu);
+      //  (opcionmenuPrincipal);
 }
 
 
