@@ -5,6 +5,8 @@ NombredelPrograma:
 Lenguaje de Programacion:
 Programador:
 Cedula:
+
+
 Descripcion del Programa:
 (coloco aqui el enunciado del ejercicio de la guia)
 seccion: 30311 5 a 7
