@@ -87,7 +87,7 @@ void limpiarconsola(); /* Funcion para detectar el sistema operativo y limpiar l
 // FUNCION PRINCIPAL
 //======================================================
 
-main() /*Funcion Principal*/
+main()
 {
 limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
