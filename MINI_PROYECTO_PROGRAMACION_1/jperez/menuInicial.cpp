@@ -1,14 +1,17 @@
 /*-------------------------------------------------
 Fecha: 17/11/2024
 Catedra: APT1312_SEM-II
-NombredelPrograma:
-Lenguaje de Programacion:
-Programador:
-Cedula:
-
-
+NombredelPrograma: menuInicial
+Lenguaje de Programacion: c++
+Programador: Sublime Text / CodeBlock
+Cedula      Apellidos           Nombres
+26783686    PEREZ FARRERAS      JOSE ANGEL
+26271246	FLORES DIAZ         YANETSI RAYMAR
+20838229	Martínez Martinez   Leoner Jesus
+30598261	Pacheco Yanez       Darwin Jahir Alejandro
+30481008	González Guzmán     Socrates Leandro
 Descripcion del Programa:
-(coloco aqui el enunciado del ejercicio de la guia)
+Menu Inicial Mini Proyecto de Programacion 1
 seccion: 30311 5 a 7
 
 Comentarios:
@@ -158,7 +161,9 @@ switch(opcionMenu){
             break;
 
         case 4:
-
+            limpiarconsola();
+            enunciado();
+            subMenuInformes(); /* Llamada para mostrar en pantalla el enunciado */
             break;
 
         case 0:
@@ -166,10 +171,11 @@ switch(opcionMenu){
 
             break;
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
 }
-
 
 } while (opcionMenu != 0);
 }
@@ -222,6 +228,8 @@ int opcion;
     break;
 
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
     }
@@ -253,6 +261,8 @@ do{
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
 
@@ -308,6 +318,8 @@ int opcion;
     break;
 
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
     }
@@ -340,6 +352,8 @@ do{
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
 
@@ -389,6 +403,8 @@ int opcion;
     break;
 
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
     }
@@ -420,6 +436,8 @@ do{
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
 
@@ -476,6 +494,8 @@ int opcion;
     break;
 
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
     }
@@ -510,6 +530,8 @@ do{
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
+    limpiarconsola();
+    enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
 
