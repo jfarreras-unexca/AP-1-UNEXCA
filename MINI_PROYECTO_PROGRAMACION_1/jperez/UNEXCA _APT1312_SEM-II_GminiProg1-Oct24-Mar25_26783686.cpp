@@ -223,7 +223,7 @@ int opcion;
         cout << "                   JOSE ANGEL PEREZ FARRERAS                    " << endl;
         cout << "                      C.I: 26.783.686                           " << endl;
         cout << "                                                                " << endl;
-        cout << "0.- SALIDA.                                                     " << endl;
+        cout << "0.- VOLVER.                                                     " << endl;
         cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;
     switch(opcion)
     {
