@@ -77,6 +77,7 @@ void subOpcionEliminar(); /* Funcion para respuesta a opciones en mantenimiento 
 void subMenuInformes(); /* Funcion del Menu Informes */
 void subOpcionInformes(); /* Funcion para respuesta a opciones en mantenimiento */
 void limpiarconsola(); /* Funcion para detectar el sistema operativo y limpiar la pantalla */
+void error404(); /*Funcion Desconocida*/
 
 //======================================================
 // FUNCION PRINCIPAL
@@ -188,6 +189,12 @@ switch(opcionMenu){
             subMenuInformes(); /* Llamada para mostrar en pantalla el enunciado */
             break;
 
+        case 404:
+            limpiarconsola();
+            enunciado();
+            error404();
+            break;
+
         case 0:
             exit(0);
 
@@ -199,7 +206,40 @@ switch(opcionMenu){
 
 }
 
-} while (opcionMenu != 0);
+    } while (opcionMenu != 0);
+}
+
+void error404(){
+limpiarconsola();
+enunciado();
+int opcion;
+    do{
+    limpiarconsola();
+    enunciado();
+        cout << "                         CREDITOS                               " << endl;
+        cout << "                                                                " << endl;
+        cout << "                                                                " << endl;
+        cout << "               ESTE CODIGO FUE DESARROLLADO POR:                " << endl;
+        cout << "                   JOSE ANGEL PEREZ FARRERAS                    " << endl;
+        cout << "                      C.I: 26.783.686                           " << endl;
+        cout << "                                                                " << endl;
+        cout << "0.- SALIDA.                                                     " << endl;
+        cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;
+    switch(opcion)
+    {
+    case 0:
+        limpiarconsola();
+        enunciado();
+        break;
+    default:
+    limpiarconsola();
+    enunciado();
+    cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
+    }
+
+    }while (opcion != 0);
+
+
 }
 
 
