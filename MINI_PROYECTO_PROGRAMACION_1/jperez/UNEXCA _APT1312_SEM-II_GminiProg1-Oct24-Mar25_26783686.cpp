@@ -69,6 +69,7 @@ double NroAleatorio(int num);
 void enunciado(); /* Llamada para mostrar en pantalla el enunciado */ /* Funcion del enunciado */
 void menuPrincipal();  /* Funcion del menu principal */
 void subMenuIncluir ();  /* Funcion del Menu Incluir */
+void incluir_alumno(); /* Funcion de la opcion Incluir */
 void subOpcionIncluir();  /* Funcion para respuesta a opciones en mantenimiento */
 void subMenuModificar ();  /* Funcion del Menu Modificar*/
 void subOpcionModificar(); /* Funcion para respuesta a opciones en mantenimiento */
@@ -77,6 +78,9 @@ void subOpcionEliminar(); /* Funcion para respuesta a opciones en mantenimiento 
 void subMenuInformes(); /* Funcion del Menu Informes */
 void subOpcionInformes(); /* Funcion para respuesta a opciones en mantenimiento */
 void limpiarconsola(); /* Funcion para detectar el sistema operativo y limpiar la pantalla */
+
+
+
 void error404(); /*Funcion Desconocida*/
 
 //======================================================
@@ -268,6 +272,20 @@ int opcion;
     }while (opcion != 0);
 }
 
+void incluir_alumno() /* Ejecucion de Funcion incluir_alumno */
+{
+
+
+
+
+
+
+
+}
+
+
+
+
 void subOpcionIncluir()  /* Ejecucion de Funcion subOpcionIncluir */
 
 
@@ -300,6 +318,8 @@ do{
 
     }while (opcion != 0);
 }
+
+
 
 
 void subMenuModificar ()  /* Ejecucion de Funcion subMenuModificar */
