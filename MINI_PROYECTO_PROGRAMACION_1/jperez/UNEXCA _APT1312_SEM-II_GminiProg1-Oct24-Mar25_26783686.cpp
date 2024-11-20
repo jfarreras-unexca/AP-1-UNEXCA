@@ -27,6 +27,8 @@ Comentarios:
 #include <iostream>
 #include <time.h>
 #include <cstdlib>
+#include <string>
+#include <vector>
 
 
 using namespace std;
@@ -69,7 +71,7 @@ double NroAleatorio(int num);
 void enunciado(); /* Llamada para mostrar en pantalla el enunciado */ /* Funcion del enunciado */
 void menuPrincipal();  /* Funcion del menu principal */
 void subMenuIncluir ();  /* Funcion del Menu Incluir */
-void incluir_alumno(); /* Funcion de la opcion Incluir */
+void incluirAlumno(); /* Funcion de la opcion Incluir */
 void subOpcionIncluir();  /* Funcion para respuesta a opciones en mantenimiento */
 void subMenuModificar ();  /* Funcion del Menu Modificar*/
 void subOpcionModificar(); /* Funcion para respuesta a opciones en mantenimiento */
@@ -100,12 +102,6 @@ menuPrincipal();
 //------------------------------------------
 //funcion coloca aqui tus funciones si colocaste los prototipos las funciones deben ir despues de la funcion main
 
-
-
-//----------------------------------
-// Bloque de instrucciones
-//----------------------------------
-
 void limpiarconsola() {
     #ifdef _WIN32
         system("cls"); /* WINDOWS */
@@ -135,8 +131,12 @@ double NroAleatorio(int num)   //definición de la función
 }
 
 
-void enunciado()  /* Ejecucion de Funcion enunciado */
+//----------------------------------
+// Bloque de instrucciones
+//----------------------------------
 
+
+void enunciado()  /* Ejecucion de Funcion enunciado */
 
 {
     limpiarconsola();
@@ -149,8 +149,8 @@ void enunciado()  /* Ejecucion de Funcion enunciado */
     cout << "                                                                " << endl;
 }
 
-void menuPrincipal ()  /* Ejecucion de Funcion menuPrincipal */
 
+void menuPrincipal ()  /* Ejecucion de Funcion menuPrincipal */
 
 {
 limpiarconsola();
@@ -213,11 +213,13 @@ switch(opcionMenu){
     } while (opcionMenu != 0);
 }
 
+
+
 void error404(){limpiarconsola();enunciado();int opcion;do{limpiarconsola();enunciado();cout << "                         CREDITOS                               " << endl;cout << "                                                                " << endl;cout << "                                                                " << endl;cout << "               ESTE CODIGO FUE DESARROLLADO POR:                " << endl;cout << "                   JOSE ANGEL PEREZ FARRERAS                    " << endl;cout << "                      C.I: 26.783.686                           " << endl;cout << "                                                                " << endl;cout << "0.- VOLVER.                                                     " << endl;cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;switch(opcion){case 0:limpiarconsola();enunciado();break;default:limpiarconsola();enunciado();cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;}}while (opcion != 0);}
 
 
-void subMenuIncluir ()  /* Ejecucion de Funcion subMenuIncluir */
 
+void subMenuIncluir ()  /* Ejecucion de Funcion subMenuIncluir */
 
 {
 limpiarconsola();
@@ -241,7 +243,7 @@ int opcion;
     case 1:
         limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
-        subOpcionIncluir();
+        incluirAlumno();
 
     break;
 
@@ -272,9 +274,46 @@ int opcion;
     }while (opcion != 0);
 }
 
-void incluir_alumno() /* Ejecucion de Funcion incluir_alumno */
+
+void incluirAlumno() /* Ejecucion de Funcion incluir_alumno */
 {
 
+
+struct listaAlumnos {
+    string codEst;
+    string cedula;
+    string apellNomb;
+    string codMat;
+};
+
+int n;
+
+vector<listaAlumnos> lista_alumnos;
+
+cout <<"CUANTOS ALUMNOS VA A INGRESAR? ";
+cin >> n;
+
+for (int i = 0; i < n; i++)
+{
+    listaAlumnos p;
+
+    cout << "INGRESE LA INFORMACION DEL ALUMNO " << i + 1 << ":" << endl;
+
+    cout << "CODIGO DEL ESTUDIANTE: ";
+    cin >> p.codEst;
+
+    cout << "CEDULA DEL ESTUDIANTE: ";
+    cin >> p.cedula;
+
+    cout << "APELLIDOS Y NOMBRES: ";
+    cin >> p.apellNomb;
+
+    cout << "CODIGO DE MATERIA";
+    cin >> p.codMat;
+
+    lista_alumnos.push_back(p);
+
+}
 
 
 
