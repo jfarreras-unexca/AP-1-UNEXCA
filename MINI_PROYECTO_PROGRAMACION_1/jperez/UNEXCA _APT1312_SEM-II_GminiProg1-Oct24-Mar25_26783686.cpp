@@ -209,38 +209,7 @@ switch(opcionMenu){
     } while (opcionMenu != 0);
 }
 
-void error404(){
-limpiarconsola();
-enunciado();
-int opcion;
-    do{
-    limpiarconsola();
-    enunciado();
-        cout << "                         CREDITOS                               " << endl;
-        cout << "                                                                " << endl;
-        cout << "                                                                " << endl;
-        cout << "               ESTE CODIGO FUE DESARROLLADO POR:                " << endl;
-        cout << "                   JOSE ANGEL PEREZ FARRERAS                    " << endl;
-        cout << "                      C.I: 26.783.686                           " << endl;
-        cout << "                                                                " << endl;
-        cout << "0.- VOLVER.                                                     " << endl;
-        cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;
-    switch(opcion)
-    {
-    case 0:
-        limpiarconsola();
-        enunciado();
-        break;
-    default:
-    limpiarconsola();
-    enunciado();
-    cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
-    }
-
-    }while (opcion != 0);
-
-
-}
+void error404(){limpiarconsola();enunciado();int opcion;do{limpiarconsola();enunciado();cout << "                         CREDITOS                               " << endl;cout << "                                                                " << endl;cout << "                                                                " << endl;cout << "               ESTE CODIGO FUE DESARROLLADO POR:                " << endl;cout << "                   JOSE ANGEL PEREZ FARRERAS                    " << endl;cout << "                      C.I: 26.783.686                           " << endl;cout << "                                                                " << endl;cout << "0.- VOLVER.                                                     " << endl;cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;switch(opcion){case 0:limpiarconsola();enunciado();break;default:limpiarconsola();enunciado();cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;}}while (opcion != 0);}
 
 
 void subMenuIncluir ()  /* Ejecucion de Funcion subMenuIncluir */
