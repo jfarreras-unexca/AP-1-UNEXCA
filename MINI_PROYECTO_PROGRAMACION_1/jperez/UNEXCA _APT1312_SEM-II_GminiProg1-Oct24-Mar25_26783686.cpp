@@ -277,20 +277,37 @@ int opcion;
 
 void incluirAlumno() /* Ejecucion de Funcion incluir_alumno */
 {
+    limpiarconsola();
+    enunciado();
+    int opcion;
+do {
+    limpiarconsola();
+    enunciado();
+    cout << "                         MENU INCLUIR                           " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << "                                                                " << endl;
+    cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;
+    switch(opcion)
+    {
+        case 1:
 
 
-struct listaAlumnos {
-    string codEst;
-    string cedula;
-    string apellNomb;
-    string codMat;
-};
+        struct listaAlumnos {
+            string codEst;
+            string cedula;
+            string apellNomb;
+            string codMat;
+                            };
 
 int n;
-
 vector<listaAlumnos> lista_alumnos;
 
-cout <<"CUANTOS ALUMNOS VA A INGRESAR? ";
+cout <<"CANTIDAD DE ALUMNOS A INGRESAR? ";
 cin >> n;
 
 for (int i = 0; i < n; i++)
@@ -315,7 +332,31 @@ for (int i = 0; i < n; i++)
 
 }
 
+cout << "\nLISTADO DE ALUMNOS:\n";
+for (int i = 0; i < n; i++) {
+    cout << "Alumno" << i + 1 << ": "
+         << listaAlumnos[i].codEst << " "
+         << listaAlumnos[i].cedula << " "
+         << listaAlumnos[i].apellNomb << " "
+         << listaAlumnos[i].codMat << endl;
+                            }
+    }
+            break;
+
+        case 0:
+            limpiarconsola();
+            enunciado();
+            break;
+        default:
+            limpiarconsola();
+            enunciado();
+
 }
+
+}while (opcion != 0);
+
+}
+
 
 
 
