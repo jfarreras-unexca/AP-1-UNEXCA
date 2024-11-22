@@ -280,6 +280,7 @@ void incluirAlumno() /* Ejecucion de Funcion incluir_alumno */
     limpiarconsola();
     enunciado();
     int opcion;
+    int n;
 do {
     limpiarconsola();
     enunciado();
@@ -295,7 +296,8 @@ do {
     switch(opcion)
     {
         case 1:
-
+            limpiarconsola();
+            enunciado();
 
         struct listaAlumnos {
             string codEst;
@@ -304,14 +306,13 @@ do {
             string codMat;
                             };
 
-int n;
+{
 vector<listaAlumnos> lista_alumnos;
 
 cout <<"CANTIDAD DE ALUMNOS A INGRESAR? ";
 cin >> n;
 
-for (int i = 0; i < n; i++)
-{
+for (int i = 0; i < n; i++) {
     listaAlumnos p;
 
     cout << "INGRESE LA INFORMACION DEL ALUMNO " << i + 1 << ":" << endl;
@@ -325,37 +326,41 @@ for (int i = 0; i < n; i++)
     cout << "APELLIDOS Y NOMBRES: ";
     cin >> p.apellNomb;
 
-    cout << "CODIGO DE MATERIA";
+    cout << "CODIGO DE MATERIA: ";
     cin >> p.codMat;
 
     lista_alumnos.push_back(p);
-
 }
 
 cout << "\nLISTADO DE ALUMNOS:\n";
+
 for (int i = 0; i < n; i++) {
     cout << "Alumno" << i + 1 << ": "
          << listaAlumnos[i].codEst << " "
          << listaAlumnos[i].cedula << " "
          << listaAlumnos[i].apellNomb << " "
-         << listaAlumnos[i].codMat << endl;
+         << listaAlumnos[i].codMat << //endl;
                             }
-    }
+}
             break;
 
         case 0:
             limpiarconsola();
             enunciado();
             break;
+
         default:
             limpiarconsola();
             enunciado();
-
+            cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 }
 
 }while (opcion != 0);
 
 }
+
+
+
 
 
 
