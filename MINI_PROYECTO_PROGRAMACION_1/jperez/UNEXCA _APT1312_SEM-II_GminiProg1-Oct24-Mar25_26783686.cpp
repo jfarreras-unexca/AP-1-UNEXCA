@@ -281,6 +281,8 @@ void incluirAlumno() /* Ejecucion de Funcion incluir_alumno */
     enunciado();
     int opcion;
     int n;
+
+
 do {
     limpiarconsola();
     enunciado();
@@ -293,24 +295,22 @@ do {
     cout << "                                                                " << endl;
     cout << "                                                                " << endl;
     cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;
+        struct listaAlumnos {
+    string codEst;
+    string cedula;
+    string apellNomb;
+    string codMat;
+};
+vector<listaAlumnos> lista_alumnos;
+
     switch(opcion)
     {
         case 1:
             limpiarconsola();
             enunciado();
-
-        struct listaAlumnos {
-            string codEst;
-            string cedula;
-            string apellNomb;
-            string codMat;
-                            };
-
-{
-vector<listaAlumnos> lista_alumnos;
-
 cout <<"CANTIDAD DE ALUMNOS A INGRESAR? ";
 cin >> n;
+
 
 for (int i = 0; i < n; i++) {
     listaAlumnos p;
@@ -330,18 +330,21 @@ for (int i = 0; i < n; i++) {
     cin >> p.codMat;
 
     lista_alumnos.push_back(p);
+
 }
 
 cout << "\nLISTADO DE ALUMNOS:\n";
 
 for (int i = 0; i < n; i++) {
     cout << "Alumno" << i + 1 << ": "
-         << listaAlumnos[i].codEst << " "
-         << listaAlumnos[i].cedula << " "
-         << listaAlumnos[i].apellNomb << " "
-         << listaAlumnos[i].codMat << //endl;
+         << lista_alumnos[i].codEst << "     "
+         << lista_alumnos[i].cedula << "     "
+         << lista_alumnos[i].apellNomb << "     "
+         << lista_alumnos[i].codMat << endl;
                             }
-}
+
+    cout << "PRESIONE 0 PARA VOLVER AL MENU ANTERIOR: ";
+    cin >> opcion;
             break;
 
         case 0:
