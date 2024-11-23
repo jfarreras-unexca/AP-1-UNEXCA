@@ -77,6 +77,8 @@ int APAB = (PAB + PAB*PorB/100); /* Acumulador de crecimiento poblacional de B *
 void limpiarconsola();
 void encabezado();
 void acumulacionPA();
+void crecimientoanual();
+
 
 
 //------------------------------------------
@@ -102,11 +104,7 @@ main()
 {
 
 limpiarconsola();
-encabezado();
-
-
-
-cout << "ACTUALIZACION DE POBLACION ACTUAL DE A: " << APAA << endl; 
+acumulacionPA();
 
     return 0;
 }
@@ -120,17 +118,53 @@ cout << "ACTUALIZACION DE POBLACION ACTUAL DE A: " << APAA << endl;
 
 void encabezado(){
 
-cout    << "|POLBACION DE A |"
-        << "|POBLACION DE B |"
-        << "|ANNO |"
-        << "|% DE CRECIMIENTO A |"
-        << "|% DE CRECIMIENTO B |"
-        << "|POB. ACT. A |"
-        << "|POB. ACT. B |" << endl;
-
+cout    << "| POLBACION DE A |"
+        << " POBLACION DE B |"
+        << " ANNO |"
+        << " % DE CRECIMIENTO A |"
+        << " % DE CRECIMIENTO B |"
+        << " POB. ACT. A |"
+        << " POB. ACT. B |" << endl;
 
 }
 
+void acumulacionPA(){
+
+
+cout << "INGRESE LA CANTIDAD DE REPETICIONES: "; cin >> repeticiones;
+limpiarconsola();
+encabezado();
+
+
+for (int i = 1; i < repeticiones; ++i)
+{
+
+
+APAA += (APAA * PorA / 100);
+
+APAB += (APAB * PorB / 100);
+
+cout    << PA
+        << "            "
+        << PB
+        << endl;
+
+cout    
+
+        << " " 
+        << APAA
+        << "            "
+        << APAB
+        << "            "
+        << " " 
+        << 1968 + i
+        << endl;
+
+}
+
+
+
+}
 
 //----------------------------------
 // Bloque de instrucciones
