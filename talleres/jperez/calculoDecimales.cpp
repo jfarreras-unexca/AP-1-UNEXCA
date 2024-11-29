@@ -39,6 +39,11 @@ using namespace std;
 // VARIABLES GLOBALES
 //======================================================*/
 
+int cont1=0;
+int numero=0;
+int numero1=0;
+int num=0;
+
 
 //======================================================
 
@@ -63,6 +68,7 @@ using namespace std;
 void limpiarconsola();
 void numeroDecimal();
 void enunciado();
+double NroAleatorio(int num);
 
 //------------------------------------------
 //funcion coloca aqui tus funciones
@@ -78,6 +84,26 @@ void limpiarconsola() {
 }
 
 
+double NroAleatorio(int num)   //definición de la función
+{
+// VARIABLES lOCALES
+//------------------------------------------------------
+//esta funcion genera numeros aleatorios entre 1 y 100
+// si desea aumentar o disminuir el rango de numeros que se generan
+//cambia la el valor de la variable numero
+        cont1=0;
+        // cambia en la linea siguiente el valor de la variable numero
+        // ahora esta en 100 para aumentar el rango de numero aleatorios cambiala
+        //consejo dejala asi por ahora.
+        numero=20;
+        numero=round(numero);
+        numero1=round(numero+1);
+        // Genera numero aleatorio entre 1 y numero
+        num = 1 + rand() % (numero1 - 1);
+        //cout << num << " " <<endl;
+    return num;
+}
+
 //======================================================
 // FUNCION PRINCIPAL
 //======================================================
@@ -85,6 +111,9 @@ void limpiarconsola() {
 
 main()
 {
+    srand(time(NULL));// llama al generador de numero aleatorios el cual le entrega 1 valor a la vez.
+
+
     limpiarconsola();
     enunciado();
     numeroDecimal();
@@ -119,8 +148,9 @@ void enunciado()  /* Ejecucion de Funcion enunciado */
 
 void numeroDecimal(){
     limpiarconsola();
+    enunciado();
     vector <double> decimales; // Vector para guardar los numeros con decimales
-    double numero;
+    double numeror;
 
     cout << "INGRESE 10 NUMEROS REALES: ";
 
@@ -128,28 +158,32 @@ void numeroDecimal(){
     /* Ciclo para leer los 10 numeros ingresados */
 
     for (int i = 0; i < 10; ++i){
+        limpiarconsola();
+        enunciado();
         cout << "Numero " << i + 1 << ": "; //Mostrar en pantalla los numeros
-        cin >> numero; // Lectura de numero ingresado
+        cin >> numeror; // Lectura de numero ingresado
 
-
+        // Separar los numeros en una parte entera y una decimal usando "modf"
         double pentera; //Variable para almacenar los enteros
-        double pdecimal = modf (numero, &pentera);
+        double pdecimal = modf (numeror, &pentera); // separacion parte decimal y entera
 
 
-        if (fabs(pdecimal) > 1e-10) {
-            decimales.push_back(numero);
+        // Validar que la parte decimal no es igual a 0
+        if (fabs(pdecimal) > 1e-10) { //fabs para declarar valores abosolutos, 
+            decimales.push_back(numeror);
         }
     }
 
-
-    if (!decimales.empty()) {
+    // mostrar todos los numeros decimales existentes
+    if (!decimales.empty()) { //Validacion de que el vector no este vacio 
         cout << "Numeros con decimales: ";
         for (double n : decimales) {
-            cout << n << " ";
+            cout << n << " "; // Recorrer e imprimir cada numero con decimales
         }
         cout << endl;
     } else {
 
+        //Mostrar cuando no existen decimales
         cout << "NINGUN NUMERO ES DECIMAL";
     }
 
