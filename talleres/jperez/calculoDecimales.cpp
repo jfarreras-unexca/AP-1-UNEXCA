@@ -111,9 +111,6 @@ double NroAleatorio(int num)   //definición de la función
 
 main()
 {
-    srand(time(NULL));// llama al generador de numero aleatorios el cual le entrega 1 valor a la vez.
-
-
     limpiarconsola();
     enunciado();
     numeroDecimal();
@@ -160,8 +157,9 @@ void numeroDecimal(){
     for (int i = 0; i < 10; ++i){
         limpiarconsola();
         enunciado();
+        srand(time(NULL));// llama al generador de numero aleatorios el cual le entrega 1 valor a la vez.
         cout << "Numero " << i + 1 << ": "; //Mostrar en pantalla los numeros
-        cin >> numeror; // Lectura de numero ingresado
+        numeror=NroAleatorio(num); // Lectura de numero ingresado
 
         // Separar los numeros en una parte entera y una decimal usando "modf"
         double pentera; //Variable para almacenar los enteros
