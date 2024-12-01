@@ -96,8 +96,8 @@ double NroAleatorio(int num)   //definición de la función
         // ahora esta en 100 para aumentar el rango de numero aleatorios cambiala
         //consejo dejala asi por ahora.
         numero=20;
-        numero=round(numero);
-        numero1=round(numero+1);
+        numero=(numero);
+        numero1=(numero+1);
         // Genera numero aleatorio entre 1 y numero
         num = 1 + rand() % (numero1 - 1);
         //cout << num << " " <<endl;
