@@ -6,6 +6,10 @@ Lenguaje de Programacion: c++
 Programador: Sublime Text / CodeBlock
 Cedula      Apellidos           Nombres
 26783686    PEREZ FARRERAS      JOSE ANGEL
+26271246	FLORES DIAZ         YANETSI RAYMAR
+20838229	Mart韓ez Martinez   Leoner Jesus
+30598261	Pacheco Yanez       Darwin Jahir Alejandro
+30481008	Gonz醠ez Guzm醤     Socrates Leandro
 Descripcion del Programa:
 Menu Inicial Mini Proyecto de Programacion 1
 seccion: 30311 5 a 7
@@ -27,8 +31,6 @@ Comentarios:
 #include <iostream>
 #include <time.h>
 #include <cstdlib>
-#include <string>
-#include <vector>
 
 
 using namespace std;
@@ -36,10 +38,6 @@ using namespace std;
 // VARIABLES GLOBALES
 //======================================================*/
 
-int cont1=0;
-int numero=0;
-int numero1=0;
-int num=0;
 
 //======================================================
 
@@ -49,8 +47,13 @@ int num=0;
 //=======================================================*/
 //------------------------------------------
 
-void limpiarconsola();
-double NroAleatorio(int num);
+void limpiarconsola() {
+    #ifdef _WIN32
+        system("cls"); /* WINDOWS */
+    #else
+        std::system("clear"); /* LINUX */
+    #endif
+}
 
 /*coloca aqui Los prototipos si colocas
  los prototipos las funciones deben
@@ -71,7 +74,6 @@ double NroAleatorio(int num);
 void enunciado(); /* Llamada para mostrar en pantalla el enunciado */ /* Funcion del enunciado */
 void menuPrincipal();  /* Funcion del menu principal */
 void subMenuIncluir ();  /* Funcion del Menu Incluir */
-void incluirAlumno(); /* Funcion de la opcion Incluir */
 void subOpcionIncluir();  /* Funcion para respuesta a opciones en mantenimiento */
 void subMenuModificar ();  /* Funcion del Menu Modificar*/
 void subOpcionModificar(); /* Funcion para respuesta a opciones en mantenimiento */
@@ -80,10 +82,6 @@ void subOpcionEliminar(); /* Funcion para respuesta a opciones en mantenimiento 
 void subMenuInformes(); /* Funcion del Menu Informes */
 void subOpcionInformes(); /* Funcion para respuesta a opciones en mantenimiento */
 void limpiarconsola(); /* Funcion para detectar el sistema operativo y limpiar la pantalla */
-
-
-
-void error404(); /*Funcion Desconocida*/
 
 //======================================================
 // FUNCION PRINCIPAL
@@ -102,33 +100,6 @@ menuPrincipal();
 //------------------------------------------
 //funcion coloca aqui tus funciones si colocaste los prototipos las funciones deben ir despues de la funcion main
 
-void limpiarconsola() {
-    #ifdef _WIN32
-        system("cls"); /* WINDOWS */
-    #else
-        std::system("clear"); /* LINUX */
-    #endif
-}
-
-double NroAleatorio(int num)   //definici贸n de la funci贸n
-{
-// VARIABLES lOCALES
-//------------------------------------------------------
-//esta funcion genera numeros aleatorios entre 1 y 100
-// si desea aumentar o disminuir el rango de numeros que se generan
-//cambia la el valor de la variable numero
-        cont1=0;
-        // cambia en la linea siguiente el valor de la variable numero
-        // ahora esta en 100 para aumentar el rango de numero aleatorios cambiala
-        //consejo dejala asi por ahora.
-        numero=100;
-        numero=round(numero);
-        numero1=round(numero+1);
-        // Genera numero aleatorio entre 1 y numero
-        num = 1 + rand() % (numero1 - 1);
-        //cout << num << " " <<endl;
-    return num;
-}
 
 
 //----------------------------------
@@ -136,7 +107,9 @@ double NroAleatorio(int num)   //definici贸n de la funci贸n
 //----------------------------------
 
 
+
 void enunciado()  /* Ejecucion de Funcion enunciado */
+
 
 {
     limpiarconsola();
@@ -149,8 +122,8 @@ void enunciado()  /* Ejecucion de Funcion enunciado */
     cout << "                                                                " << endl;
 }
 
-
 void menuPrincipal ()  /* Ejecucion de Funcion menuPrincipal */
+
 
 {
 limpiarconsola();
@@ -193,12 +166,6 @@ switch(opcionMenu){
             subMenuInformes(); /* Llamada para mostrar en pantalla el enunciado */
             break;
 
-        case 404:
-            limpiarconsola();
-            enunciado();
-            error404();
-            break;
-
         case 0:
             exit(0);
 
@@ -210,16 +177,12 @@ switch(opcionMenu){
 
 }
 
-    } while (opcionMenu != 0);
+} while (opcionMenu != 0);
 }
 
 
-
-void error404(){limpiarconsola();enunciado();int opcion;do{limpiarconsola();enunciado();cout << "                         CREDITOS                               " << endl;cout << "                                                                " << endl;cout << "                                                                " << endl;cout << "               ESTE CODIGO FUE DESARROLLADO POR:                " << endl;cout << "                   JOSE ANGEL PEREZ FARRERAS                    " << endl;cout << "                      C.I: 26.783.686                           " << endl;cout << "                                                                " << endl;cout << "0.- VOLVER.                                                     " << endl;cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;switch(opcion){case 0:limpiarconsola();enunciado();break;default:limpiarconsola();enunciado();cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;}}while (opcion != 0);}
-
-
-
 void subMenuIncluir ()  /* Ejecucion de Funcion subMenuIncluir */
+
 
 {
 limpiarconsola();
@@ -243,7 +206,7 @@ int opcion;
     case 1:
         limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
-        incluirAlumno();
+        subOpcionIncluir();
 
     break;
 
@@ -273,101 +236,6 @@ int opcion;
 
     }while (opcion != 0);
 }
-
-
-void incluirAlumno() /* Ejecucion de Funcion incluir_alumno */
-{
-    limpiarconsola();
-    enunciado();
-    int opcion;
-    int n;
-
-
-do {
-    limpiarconsola();
-    enunciado();
-    cout << "                         MENU INCLUIR                           " << endl;
-    cout << "                                                                " << endl;
-    cout << "                                                                " << endl;
-    cout << "                                                                " << endl;
-    cout << "                                                                " << endl;
-    cout << "                                                                " << endl;
-    cout << "                                                                " << endl;
-    cout << "                                                                " << endl;
-    cout << " INGRESE UNA OPCION Y PRESIONE ENTER: " ;cin >> opcion;
-        struct listaAlumnos {
-    string codEst;
-    string cedula;
-    string apellNomb;
-    string codMat;
-};
-vector<listaAlumnos> lista_alumnos;
-
-    switch(opcion)
-    {
-        case 1:
-            limpiarconsola();
-            enunciado();
-cout <<"CANTIDAD DE ALUMNOS A INGRESAR? ";
-cin >> n;
-
-
-for (int i = 0; i < n; i++) {
-    listaAlumnos p;
-
-    cout << "INGRESE LA INFORMACION DEL ALUMNO " << i + 1 << ":" << endl;
-
-    cout << "CODIGO DEL ESTUDIANTE: ";
-    cin >> p.codEst;
-
-    cout << "CEDULA DEL ESTUDIANTE: ";
-    cin >> p.cedula;
-
-    cout << "APELLIDOS Y NOMBRES: ";
-    cin >> p.apellNomb;
-
-    cout << "CODIGO DE MATERIA: ";
-    cin >> p.codMat;
-
-    lista_alumnos.push_back(p);
-
-}
-
-cout << "\nLISTADO DE ALUMNOS:\n";
-
-for (int i = 0; i < n; i++) {
-    cout << "Alumno" << i + 1 << ": "
-         << lista_alumnos[i].codEst << "     "
-         << lista_alumnos[i].cedula << "     "
-         << lista_alumnos[i].apellNomb << "     "
-         << lista_alumnos[i].codMat << endl;
-                            }
-
-    cout << "PRESIONE 0 PARA VOLVER AL MENU ANTERIOR: ";
-    cin >> opcion;
-            break;
-
-        case 0:
-            limpiarconsola();
-            enunciado();
-            break;
-
-        default:
-            limpiarconsola();
-            enunciado();
-            cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
-}
-
-}while (opcion != 0);
-
-}
-
-
-
-
-
-
-
 
 void subOpcionIncluir()  /* Ejecucion de Funcion subOpcionIncluir */
 
@@ -401,8 +269,6 @@ do{
 
     }while (opcion != 0);
 }
-
-
 
 
 void subMenuModificar ()  /* Ejecucion de Funcion subMenuModificar */
