@@ -1,15 +1,11 @@
 /*-------------------------------------------------
-Fecha: 17/11/2024
+Fecha: 04/12/2024
 Catedra: APT1312_SEM-II
 NombredelPrograma: menuInicial
 Lenguaje de Programacion: c++
 Programador: Sublime Text / CodeBlock
 Cedula      Apellidos           Nombres
 26783686    PEREZ FARRERAS      JOSE ANGEL
-26271246	FLORES DIAZ         YANETSI RAYMAR
-20838229	Martínez Martinez   Leoner Jesus
-30598261	Pacheco Yanez       Darwin Jahir Alejandro
-30481008	González Guzmán     Socrates Leandro
 Descripcion del Programa:
 Menu Inicial Mini Proyecto de Programacion 1
 seccion: 30311 5 a 7
@@ -87,9 +83,9 @@ void limpiarconsola(); /* Funcion para detectar el sistema operativo y limpiar l
 // FUNCION PRINCIPAL
 //======================================================
 
-main()
+int main()
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 menuPrincipal();
     return 0;
@@ -112,7 +108,7 @@ void enunciado()  /* Ejecucion de Funcion enunciado */
 
 
 {
-    limpiarconsola();
+    //limpiarconsola();
     cout << "                                                                " << endl; /* "endl" funciona para insertar los caracteres en las siguiente linea */
     cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl;
     cout << "Sede: La Floresta                                               " << endl;
@@ -126,7 +122,7 @@ void menuPrincipal ()  /* Ejecucion de Funcion menuPrincipal */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcionMenu;
 
@@ -143,25 +139,25 @@ int opcionMenu;
 
 switch(opcionMenu){
         case 1:
-            limpiarconsola();
+            //limpiarconsola();
             enunciado(); /* Llamada para mostrar en pantalla el enunciado */
             subMenuIncluir();
             break;
 
         case 2:
-            limpiarconsola();
+            //limpiarconsola();
             enunciado(); /* Llamada para mostrar en pantalla el enunciado */
             subMenuModificar();
             break;
 
         case 3:
-            limpiarconsola();
+            //limpiarconsola();
             enunciado(); /* Llamada para mostrar en pantalla el enunciado */
             subMenuEliminar();
             break;
 
         case 4:
-            limpiarconsola();
+            //limpiarconsola();
             enunciado();
             subMenuInformes(); /* Llamada para mostrar en pantalla el enunciado */
             break;
@@ -171,7 +167,7 @@ switch(opcionMenu){
 
             break;
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
@@ -185,12 +181,12 @@ void subMenuIncluir ()  /* Ejecucion de Funcion subMenuIncluir */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
     do{
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "                         MENU INCLUIR                           " << endl;
     cout << "                                                                " << endl;
@@ -204,31 +200,31 @@ int opcion;
     switch(opcion)
     {
     case 1:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionIncluir();
 
     break;
 
     case 2:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionIncluir();
     break;
 
     case 3:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionIncluir();
     break;
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     break;
 
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
@@ -241,7 +237,7 @@ void subOpcionIncluir()  /* Ejecucion de Funcion subOpcionIncluir */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
@@ -256,12 +252,12 @@ do{
     switch(opcion){
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
@@ -275,12 +271,12 @@ void subMenuModificar ()  /* Ejecucion de Funcion subMenuModificar */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
     do{
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "                        MENU MODIFICAR                          " << endl;
     cout << "                                                                " << endl;
@@ -294,31 +290,31 @@ int opcion;
     switch(opcion)
     {
     case 1:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionModificar();
 
     break;
 
     case 2:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionModificar();
     break;
 
     case 3:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionModificar();
     break;
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     break;
 
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
@@ -332,7 +328,7 @@ void subOpcionModificar()  /* Ejecucion de Funcion subOpcionModificar */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
@@ -347,12 +343,12 @@ do{
     switch(opcion){
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
@@ -365,12 +361,12 @@ void subMenuEliminar()  /* Ejecucion de Funcion subMenuEliminar */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
     do{
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "                        MENU ELIMINAR                           " << endl;
     cout << "                                                                " << endl;
@@ -385,25 +381,25 @@ int opcion;
     switch(opcion)
     {
     case 1:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionEliminar();
 
     break;
 
     case 2:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionEliminar();
     break;
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     break;
 
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
@@ -416,7 +412,7 @@ void subOpcionEliminar()  /* Ejecucion de Funcion subOpcionEliminar */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
@@ -431,12 +427,12 @@ do{
     switch(opcion){
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
@@ -451,12 +447,12 @@ void subMenuInformes()  /* Ejecucion de Funcion subMenuInformes */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
     do{
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "                        MENU INFORMES                           " << endl;
     cout << "                                                                " << endl;
@@ -470,31 +466,31 @@ int opcion;
     switch(opcion)
     {
     case 1:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionInformes();
 
     break;
 
     case 2:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionInformes();
     break;
 
     case 3:
-        limpiarconsola();
+        //limpiarconsola();
         enunciado(); /* Llamada para mostrar en pantalla el enunciado */
         subOpcionInformes();
     break;
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     break;
 
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
 
@@ -510,7 +506,7 @@ void subOpcionInformes()  /* Ejecucion de Funcion subOpcionInformes */
 
 
 {
-limpiarconsola();
+//limpiarconsola();
 enunciado(); /* Llamada para mostrar en pantalla el enunciado */
 int opcion;
 
@@ -525,12 +521,12 @@ do{
     switch(opcion){
 
     case 0:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado(); /* Llamada para mostrar en pantalla el enunciado */
     cout << "REGRESANDO AL MENU ANTERIOR" << endl;
     break;
     default:
-    limpiarconsola();
+    //limpiarconsola();
     enunciado();
     cout << "OPCION INVALIDA, INGRESE NUEVAMENTE UNA OPCION" << endl;
     }
