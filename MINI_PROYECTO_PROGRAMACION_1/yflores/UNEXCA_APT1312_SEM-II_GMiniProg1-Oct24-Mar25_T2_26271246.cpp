@@ -7,9 +7,9 @@ Programador: Sublime Text / CodeBlock
 Cedula      Apellidos           Nombres
 26783686    PEREZ FARRERAS      JOSE ANGEL
 26271246	FLORES DIAZ         YANETSI RAYMAR
-20838229	MartÌnez Martinez   Leoner Jesus
+20838229	Mart√≠nez Martinez   Leoner Jesus
 30598261	Pacheco Yanez       Darwin Jahir Alejandro
-30481008	Gonz·lez Guzm·n     Socrates Leandro
+30481008	Gonz√°lez Guzm√°n     Socrates Leandro
 Descripcion del Programa:
 Menu Inicial Mini Proyecto de Programacion 1
 seccion: 30311 5 a 7
