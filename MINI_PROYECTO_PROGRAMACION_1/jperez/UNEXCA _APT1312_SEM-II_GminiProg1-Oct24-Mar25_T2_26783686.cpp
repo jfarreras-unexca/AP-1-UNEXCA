@@ -43,13 +43,8 @@ using namespace std;
 //=======================================================*/
 //------------------------------------------
 
-void limpiarconsola() {
-    #ifdef _WIN32
-        system("cls"); /* WINDOWS */
-    #else
-        std::system("clear"); /* LINUX */
-    #endif
-}
+
+
 
 /*coloca aqui Los prototipos si colocas
  los prototipos las funciones deben
@@ -102,13 +97,17 @@ menuPrincipal();
 // Bloque de instrucciones
 //----------------------------------
 
-
-
 void enunciado()  /* Ejecucion de Funcion enunciado */
 
 
 {
-    //limpiarconsola();
+    ////limpiarconsola();
+    #ifdef _WIN32
+        system("cls"); /* WINDOWS */
+    #else
+        std::system("clear"); /* LINUX */
+    #endif
+
     cout << "                                                                " << endl; /* "endl" funciona para insertar los caracteres en las siguiente linea */
     cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl;
     cout << "Sede: La Floresta                                               " << endl;
@@ -117,6 +116,11 @@ void enunciado()  /* Ejecucion de Funcion enunciado */
     cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
     cout << "                                                                " << endl;
 }
+
+
+
+
+
 
 void menuPrincipal ()  /* Ejecucion de Funcion menuPrincipal */
 
