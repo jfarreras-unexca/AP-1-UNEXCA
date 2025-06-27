@@ -8,6 +8,8 @@ Cedula: 26.783.686
 Descripcion del Programa:
 (coloco aqui el enumciado del ejercicio de la guia)
 
+Calcular el nuevo salario de un trabajador si obtuvo un incremento del 25% sobre su
+salario anterior.
 
 Comentarios:
 */
@@ -33,10 +35,15 @@ using namespace std;
 //======================================================*/
 
 //======================================================
-int cont1=0;
-int numero=0;
-int numero1=0;
-int num=0;
+//int cont1=0;
+//int numero=0;
+//int numero1=0;
+//int num=0;
+int salario_base = 0;
+int incremento = 0.25;
+int salario_final = 0;
+
+
 
 /*=======================================================
 // PROTOTIPOS //
@@ -48,9 +55,30 @@ int num=0;
 
 
 */
+void encabezado ()
+{
+
+    #ifdef _WIN32
+        system("cls"); /* WINDOWS */
+    #else
+        std::system("clear"); /* LINUX */
+    #endif
+
+    cout << "\n" << endl;                                                               // "\n" funciona para agregar una linea en blanco
+    cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl; // "endl" funciona para insertar los caracteres en las siguiente linea
+    cout << "Sede: La Floresta                                               " << endl;
+    cout << "Turno: Nocturno                                                 " << endl;
+    cout << "Seccion: Viernes                                                " << endl;
+    cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
+    cout << "\n" << endl;
+}
+
+
 /*=======================================================
 // FUNCIONES //
 //=======================================================*/
+
+void encabezado(); //Funcion para limpiar la pantalla y llamar al encabezado
 
 
 //------------------------------------------
@@ -69,10 +97,8 @@ int num=0;
 
 main()
 {
+    encabezado();
 
-    cout << "**********************************" << endl << endl
-    cout << "     Se Compilo sin Errores       " << endl << endl;
-    cout << "**********************************" << endl;
     return 0;
 }
 /*=======================================================
