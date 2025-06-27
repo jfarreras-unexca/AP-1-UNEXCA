@@ -1,10 +1,10 @@
 /*-------------------------------------------------
 Fecha:
-Catedra:
+Catedra: APT
 NombredelPrograma:
-Lenguaje de Programacion:
-Programador:
-Cedula:
+Lenguaje de Programacion: c++
+Programador: Jose Angel Perez Farreras
+Cedula: 26.783.686
 Descripcion del Programa:
 (coloco aqui el enumciado del ejercicio de la guia)
 
