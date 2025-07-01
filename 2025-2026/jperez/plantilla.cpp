@@ -8,8 +8,7 @@ Cedula: 26.783.686
 Descripcion del Programa:
 (coloco aqui el enumciado del ejercicio de la guia)
 
-Calcular el nuevo salario de un trabajador si obtuvo un incremento del 25% sobre su
-salario anterior.
+
 
 Comentarios:
 */

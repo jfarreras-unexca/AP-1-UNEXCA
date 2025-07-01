@@ -8,8 +8,8 @@ Cedula: 26.783.686
 Descripcion del Programa:
 (coloco aqui el enumciado del ejercicio de la guia)
 
-Calcular el nuevo salario de un trabajador si obtuvo un incremento del 25% sobre su
-salario anterior.
+Se desea saber qué porcentaje de hombres y que porcentaje de mujeres hay en el
+grupo de estudiantes de su sección.
 
 Comentarios:
 */
@@ -77,7 +77,7 @@ void encabezado ()
 //=======================================================*/
 
 void encabezado(); //Funcion para limpiar la pantalla y llamar al encabezado
-
+void porcentajeHM(); //Funcion para calcular el porcentaje de diferencia entre Hombre y Mujeres de un Salon de Clases
 
 //------------------------------------------
 //funcion coloca aqui tus funciones
