@@ -39,9 +39,7 @@ using namespace std;
 //int numero=0;
 //int numero1=0;
 //int num=0;
-int salario_base = 0;
-int incremento = 0.25;
-int salario_final = 0;
+
 
 
 
