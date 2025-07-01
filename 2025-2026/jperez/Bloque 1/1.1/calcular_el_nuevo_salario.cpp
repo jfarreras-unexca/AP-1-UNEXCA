@@ -39,10 +39,10 @@ using namespace std;
 //int numero=0;
 //int numero1=0;
 //int num=0;
-int salario_base = 0;
-int incremento = 0.25;
-int salario_final = 0;
-
+int salario_base = 0; //Variable para recibir el salario base
+int incremento = 125/100; //variable para declarar el 25% de aumento
+int salario_final = 0; //Variable para el resultado del incremento salarial
+int mantener = 0;
 
 
 /*=======================================================
@@ -79,7 +79,7 @@ void encabezado ()
 //=======================================================*/
 
 void encabezado(); //Funcion para limpiar la pantalla y llamar al encabezado
-
+void incremento_salario(); //Funcion para recibir el salario base y calcular un incremento del 25%
 
 //------------------------------------------
 //funcion coloca aqui tus funciones
@@ -98,7 +98,10 @@ void encabezado(); //Funcion para limpiar la pantalla y llamar al encabezado
 main()
 {
     encabezado();
-
+    incremento_salario();
+    cout << "El aumento del %25 con un salario de " << salario_base << " es de: " << salario_final << endl;
+    cout << "Presione '0' para salir.";
+    cin >> mantener;
     return 0;
 }
 /*=======================================================
@@ -112,7 +115,14 @@ main()
 //----------------------------------
 // funcion crea un numero aleatorio
 
+void incremento_salario()
+{
+    cout << "Introduzca el Salario Base: ";
+    cin >> salario_base;
+    encabezado();
 
+    salario_final = salario_base*incremento;
+}
 
 
 
