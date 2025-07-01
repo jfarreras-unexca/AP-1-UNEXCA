@@ -40,7 +40,7 @@ using namespace std;
 //int numero1=0;
 //int num=0;
 int salario_base = 0; //Variable para recibir el salario base
-int incremento = 125/100; //variable para declarar el 25% de aumento
+int incremento = 25; //variable para declarar el 25% de aumento
 int salario_final = 0; //Variable para el resultado del incremento salarial
 int mantener = 0;
 
@@ -64,13 +64,13 @@ void encabezado ()
         std::system("clear"); /* LINUX */
     #endif
 
-    cout << "\n" << endl;                                                               // "\n" funciona para agregar una linea en blanco
+
     cout << "Universidad Nacional Experimental de la Gran Caracas            " << endl; // "endl" funciona para insertar los caracteres en las siguiente linea
     cout << "Sede: La Floresta                                               " << endl;
     cout << "Turno: Nocturno                                                 " << endl;
     cout << "Seccion: Viernes                                                " << endl;
     cout << "Horario: 5:00 pm a 7:00 pm                                      " << endl;
-    cout << "\n" << endl;
+    cout << "\n" << endl;                                                               // "\n" funciona para agregar una linea en blanco
 }
 
 
@@ -99,8 +99,8 @@ main()
 {
     encabezado();
     incremento_salario();
-    cout << "El aumento del %25 con un salario de " << salario_base << " es de: " << salario_final << endl;
-    cout << "Presione '0' para salir.";
+    cout << "El aumento del %25 con un salario base de " << salario_base << " es de: " << salario_final << " en total." << endl;
+    cout << "Presione '0' para salir. ";
     cin >> mantener;
     return 0;
 }
@@ -121,7 +121,7 @@ void incremento_salario()
     cin >> salario_base;
     encabezado();
 
-    salario_final = salario_base*incremento;
+    salario_final = salario_base/100*incremento+salario_base;
 }
 
 
